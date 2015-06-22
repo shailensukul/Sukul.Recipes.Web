@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('AppControllers', ['ngRoute', 'ui.bootstrap', 'AppServices', 'ui.grid', 'ui.grid.selection'])
+        .module('AppControllers', ['ui.bootstrap', 'AppServices'])
         .controller('HeaderController', HeaderController)
         .controller('BaseController', BaseController)
     ;
@@ -16,19 +16,19 @@
     }
 
     /* Base Controller*/
-    BaseController.$inject = ['$scope', '$location'];
-    function BaseController($scope, $location) {
+    BaseController.$inject = ['$scope'];
+    function BaseController($scope) {
         $scope.title = 'Base Controller';
         
     }
 
     /* Header Controller*/
-    HeaderController.$inject = ['$scope', '$location'];
-    function HeaderController($scope, $location) {
+    HeaderController.$inject = ['$scope'];
+    function HeaderController($scope) {
         $scope.title = 'Header Controller';
-        $scope.isActive = function (viewLocation) {
-            var active = (viewLocation === $location.url());
-            return active;
-        };
+        //$scope.isActive = function (viewLocation) {
+        //    var active = (viewLocation === $location.url());
+        //    return active;
+        //};
     }
 })();

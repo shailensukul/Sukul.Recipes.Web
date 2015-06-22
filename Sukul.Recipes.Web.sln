@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6FC176F8-0B1B-461A-8382-4A21C54F0A6D}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sukul.Recipes.Web", "src\Sukul.Recipes.Web\Sukul.Recipes.Web.xproj", "{44ED6CE6-9418-4ABA-BD4D-B5EDC521357B}"

@@ -1,5 +1,10 @@
-﻿body {
-}
+﻿html,
+body { height: 100%; margin: 0; padding: 0; }
+#wrapper { padding: 100px 0 75px 0; height: 100%; box-sizing: border-box; }
+.middle { min-height: 100%; position: relative; }
+.top { margin-top: -100px; height: 100px; }
+.bottom { margin-bottom: -75px; height: 75px; }
+.container { padding: 10px; }
 
 .RecipeTitle {
     font-size: x-large;

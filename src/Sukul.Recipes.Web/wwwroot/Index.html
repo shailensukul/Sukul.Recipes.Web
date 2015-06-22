@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
     <title>Sukul Receipes</title>
-    <script src="/scripts/thirdparty/jquery-1.11.2.min.js"></script>
+    <script src="scripts/thirdparty/jquery-2.1.4.min.js"></script>
     <link href="/scripts/thirdparty/bootstrap.css" rel="stylesheet" />
-    <script src="/scripts/thirdparty/angular.js"></script>
+    <script src="scripts/thirdparty/angular.min.js"></script>
     <script src="/scripts/thirdparty/angular-resource.js"></script>
-    <script src="/scripts/thirdparty/angular-route.js"></script>
+    <!--<script src="/scripts/thirdparty/angular-route.js"></script>-->
+    <script src="/scripts/thirdparty/angular-ui-router.min.js"></script> 
     <script src="/scripts/thirdparty/ui-bootstrap-tpls-0.13.0.js"></script>
     <script src="/scripts/thirdparty/angular-animate.js"></script>
     <link href="/scripts/thirdparty/ui-grid.min.css" rel="stylesheet" />
@@ -29,11 +30,11 @@
 <body>
     <div ng-app="SukulRecipesApp">
         <div ng-cloak>
-            <div class="container-fluid">
-                <div ng-include="'views/_header.html'"></div>
-                <ng-view></ng-view>
-                <div ng-include="'views/_footer.html'"></div>
+            <div ng-include="'views/_header.html'"></div>
+            <div class="container">
+                <div ui-view></div>
             </div>
+            <div ng-include="'views/_footer.html'"></div>
         </div>
     </div>
 </body>
