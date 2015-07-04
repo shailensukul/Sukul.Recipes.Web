@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
     <title>Sukul Receipes</title>
-    <script src="scripts/thirdparty/jquery-2.1.4.min.js"></script>
-    <link href="/scripts/thirdparty/bootstrap.css" rel="stylesheet" />
-    <script src="scripts/thirdparty/angular.min.js"></script>
-    <script src="/scripts/thirdparty/angular-resource.js"></script>
+    <script src="Scripts/ThirdParty/jquery-2.1.4.min.js"></script>
+    <link href="Scripts/ThirdParty/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/ThirdParty/angular.min.js"></script>
+    <script src="Scripts/ThirdParty/angular-resource.js"></script>
+    <script src="Scripts/ThirdParty/bootstrap.min.js"></script>
     <!--<script src="/scripts/thirdparty/angular-route.js"></script>-->
-    <script src="/scripts/thirdparty/angular-ui-router.min.js"></script> 
-    <script src="/scripts/thirdparty/ui-bootstrap-tpls-0.13.0.js"></script>
-    <script src="/scripts/thirdparty/angular-animate.js"></script>
-    <link href="/scripts/thirdparty/ui-grid.min.css" rel="stylesheet" />
-    <script src="/scripts/thirdparty/ui-grid.min.js"></script>
 
-    <link href="/scripts/ThirdParty/bootstrap.css" rel="stylesheet" />
-    <link href="/content/app.css" rel="stylesheet" />
-    <script src="/services/appservice.js"></script>
-    <script src="/controllers/appcontroller.js"></script>
-    <script src="/directives/appdirective.js"></script>
-    <script src="/directives/navbar/navbar.directive.js"></script>
-    <script src="directives/recipeslist/recipes.list.directive.js"></script>
-    <script src="/scripts/thirdparty/loading-bar.js"></script>
-    <link href="/scripts/thirdparty/loading-bar.css" rel="stylesheet" />
-    <script src="/scripts/app.js"></script>
+    <script src="Scripts/ThirdParty/angular-ui-router.min.js"></script> 
+    <script src="Scripts/ThirdParty/ui-bootstrap-tpls-0.13.0.js"></script>
+    <script src="Scripts/ThirdParty/angular-animate.js"></script>
+    <link href="Scripts/ThirdParty/ui-grid.min.css" rel="stylesheet" />
+    <script src="Scripts/ThirdParty/ui-grid.min.js"></script>
+
+    <link href="Content/app.css" rel="stylesheet" />
+    <script src="Services/AppService.js"></script>
+    <script src="Controllers/AppController.js"></script>
+    <script src="Directives/AppDirective.js"></script>
+    <script src="Directives/NavBar/NavBar.Directive.js"></script>
+    <script src="Directives/RecipesList/Recipes.List.Directive.js"></script>
+    <script src="Scripts/ThirdParty/loading-bar.js"></script>
+    <link href="Scripts/ThirdParty/loading-bar.css" rel="stylesheet" />
+    <script src="Scripts/app.js"></script>
 </head>
 <body>
     <div ng-app="SukulRecipesApp">
         <div ng-cloak>
-            <div ng-include="'views/_header.html'"></div>
+            <div ng-include="'Views/_header.html'"></div>
             <div class="container">
                 <div ui-view></div>
             </div>
-            <div ng-include="'views/_footer.html'"></div>
+            <div ng-include="'Views/_footer.html'"></div>
         </div>
     </div>
 </body>

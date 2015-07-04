@@ -1,3 +1,5 @@
+ Image Width: 350px wide
+ 
  <!--<div class="container-fluid">
         <div class="row" ng-repeat="recipe in recipes" ng-if="$index % 3 == 0">
             <div class="col-sm-4 hoverHighlight" ng-click="SetSelection(child)" ng-repeat="recipe in recipes.slice($index, $index+3)">
