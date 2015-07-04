@@ -17,6 +17,13 @@
                 templateUrl: '/Views/Landing.html',
                 controller: 'BaseController'
             })
+            .state('about', {
+                name: 'about',
+                url: '/about',
+                templateUrl: '/Views/Profile.html',
+                controller: 'BaseController',
+                parent: null
+            })
             .state('recipe', {
                 name: 'recipe',
                 url: '/recipe/{recipeId}',
@@ -55,7 +62,6 @@
 
         //$locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
-
     }
 
     //config.$inject = ['$routeProvider', '$locationProvider'];

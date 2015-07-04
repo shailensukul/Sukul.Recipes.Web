@@ -11,7 +11,7 @@
         var RecipeServiceFactory = {}
         
         RecipeServiceFactory.GetRecipes = function () {
-            return $http.get('/data/recipes.json');
+            return $http.get('/Data/recipes.json');
         }
 
         return RecipeServiceFactory;

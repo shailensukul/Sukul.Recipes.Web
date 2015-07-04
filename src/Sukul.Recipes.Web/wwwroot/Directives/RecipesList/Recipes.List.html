@@ -1,19 +1,16 @@
 ﻿<section>
-    <div class="container-fluid">
+    <div class="container">
         <div ng-repeat="recipe in recipes track by $index">
-            <div class="row-fluid">
-                <h2>
-                    <span style="font-size:x-large" class="RecipeTitle"
-                          ng-bind="recipe.Name"></span>
-                </h2>
+            <div class="row">
+                    <h2>
+                        <span class="RecipeTitle" ng-bind="recipe.Name"></span>
+                    </h2>
             </div>
             <div class="row">
-                <div class="col-lg-3" id="col1">
-                    <img ng-src="{{recipe.BlurbImage}}" />
-                </div>
-                <div class="col-lg-3" id="col2">
-                    <span style="font-size:large" ng-bind="recipe.Blurb"></span>
-                </div>
+                <img ng-src="{{recipe.BlurbImage}}" />
+            </div>
+            <div class="row">
+                <span style="font-size:large" ng-bind="recipe.Blurb"></span>
             </div>
         </div>
     </div>
