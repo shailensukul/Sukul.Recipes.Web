@@ -1,16 +1,20 @@
 ﻿<section>
     <div class="container">
         <div ng-repeat="recipe in recipes track by $index">
-            <div class="row">
-                    <h2>
-                        <span class="RecipeTitle" ng-bind="recipe.Name"></span>
-                    </h2>
-            </div>
-            <div class="row">
-                <img ng-src="{{recipe.BlurbImage}}" />
-            </div>
-            <div class="row">
-                <span style="font-size:large" ng-bind="recipe.Blurb"></span>
+            <div>
+                <a ui-sref="recipe({recipeId: recipe.ID})">
+                    <div class="row">
+                        <h2>
+                            <span class="RecipeTitle" ng-bind="recipe.Name"></span>
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <img ng-src="{{recipe.BlurbImage}}" />
+                    </div>
+                    <div class="row">
+                        <span style="font-size:large" ng-bind="recipe.Blurb"></span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

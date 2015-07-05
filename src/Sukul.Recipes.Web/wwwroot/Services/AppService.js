@@ -14,6 +14,11 @@
             return $http.get('/Data/recipes.json');
         }
 
+        RecipeServiceFactory.GetRecipe = function (recipeId) {
+            var recipe = '/Data/Recipes/' + recipeId + '/Recipe.json'
+            return $http.get(recipe);
+        }
+
         return RecipeServiceFactory;
     }
 })();

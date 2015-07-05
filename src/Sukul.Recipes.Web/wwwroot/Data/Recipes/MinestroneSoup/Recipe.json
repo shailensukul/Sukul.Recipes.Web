@@ -1,0 +1,35 @@
+﻿{
+  "Name": "Pasta & Minestrone Soup ",
+  "PostDate": "2015-07-04T18:25:43.511Z",
+  "BlurbImage": "/Data/Recipes/MinestroneSoup/MinestroneSoup.jpg",
+  "Ingredients": [
+    "1 cup dried black beans",
+    "1 cup dried red kidney beans",
+    "1 small onion, diced",
+    "4 cloves garlic, mined",
+    "1 can whole peeled tomatoes",
+    "1 litre vegetable stock",
+    "4 tablespoons tomato paste",
+    "1 whole fennel, diced",
+    "2 leeks",
+    "1 capsicum, diced",
+    "1 tablespoon oregano",
+    "1 tablespoon parsley",
+    "1 tablespoon basil",
+    "2 teaspoons chili flakes",
+    "1 tablespoon olive oil",
+    "2 teaspoons dried onion powder (optional)",
+    "2 teaspoons dried garlic powder (optional)",
+    "1 cup risoni pasta"
+  ],
+  "Instructions": [
+    "Soak beans in some water overnight or pressure cook them with 4 cups of water for 40 minutes",
+    "Slice the leek length-wise and soak in boiling hot water for 5 minutes",
+    "Heat pan and fry onions, garlic, basil, oregano, parsley and chilli until onion is translucent",
+    "In slow cooker, add stock, onion and garlic powder, leek, diced fennel, capsicum, crushed tomatoes, fried onions, garlic, herbs, chilli and tomato paste",
+    "Add the pressure cooked beans, along with the water its cooked in as well",
+    "Cook on low for 6 hours",
+    "Boil risoni pasta till al-dente and then drain and toss in olive oil",
+    "Once slow cooker is done, stir in pasta and serve with a little shredded cheese"
+  ]
+}

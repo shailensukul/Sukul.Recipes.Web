@@ -4,9 +4,15 @@
         'AppDirectives']);
 
     app.config(config);
-
+    $(window).on('hashchange', function () {
+            ga('send', 'pageview', {
+                'page': location.pathname + location.search + location.hash
+            });
+    })
+    
     config.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
     function config($locationProvider, $stateProvider, $urlRouterProvider) {
+
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
@@ -60,7 +66,7 @@
             })
         ;
 
-        //$locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
         $locationProvider.hashPrefix('!');
     }
 

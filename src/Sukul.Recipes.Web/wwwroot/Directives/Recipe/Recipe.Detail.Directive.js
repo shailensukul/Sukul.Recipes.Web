@@ -8,7 +8,7 @@
             scope: {
                 //carrier: '='
             },
-            templateUrl: '/Directives/RecipesList/Recipe.Detail.html',
+            templateUrl: '/Directives/Recipe/Recipe.Detail.html',
             replace: true,
             //require: 'ngModel',
             link: function ($scope, elem, attr, ctrl) {
@@ -20,14 +20,14 @@
         };
     });
 
-    Controller.$inject = ['$scope', 'RecipeService'];
-    function Controller($scope, RecipeService) {
+    Controller.$inject = ['$scope', '$stateParams', 'RecipeService'];
+    function Controller($scope, $stateParams, RecipeService) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'Recipe Detail Directive Controller';
 
         var GetRecipe = function () {
-            RecipeService.GetRecipe().success(function (data) {
+            RecipeService.GetRecipe($stateParams.recipeId).success(function (data) {
                 $scope.recipe = data;
             }).error(function (data, status, headers, config) {
                 //_showValidationErrors($scope, data);
