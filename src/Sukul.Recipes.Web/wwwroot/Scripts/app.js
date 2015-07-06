@@ -1,15 +1,22 @@
 ﻿(function () {
     'use strict';
-    var app = angular.module('SukulRecipesApp', ['ui.router', 'AppServices', 'AppControllers',
+    var app = angular.module('SukulRecipesApp', ['ui.router', 'djds4rce.angular-socialshare', 'AppServices', 'AppControllers',
         'AppDirectives']);
 
     app.config(config);
+    app.run(run);
+
     $(window).on('hashchange', function () {
             ga('send', 'pageview', {
                 'page': location.pathname + location.search + location.hash
             });
     })
     
+    run.$inject = ['$FB']
+    function run($FB) {
+        $FB.init('690126764452239');
+    }
+
     config.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
     function config($locationProvider, $stateProvider, $urlRouterProvider) {
 
@@ -66,7 +73,7 @@
             })
         ;
 
-        $locationProvider.html5Mode(false);
+        $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
     }
 

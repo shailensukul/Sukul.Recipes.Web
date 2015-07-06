@@ -2,12 +2,17 @@
     <div class="container">
         <div ng-repeat="recipe in recipes track by $index">
             <div>
+                <div class="row">
+                    <h2>
+                        <span class="RecipeTitle" ng-bind="recipe.Name"></span>
+                    </h2>
+                </div>
+                <div class="row">
+                    <a facebook-feed-share class="facebookShare" data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}" data-shares='shares'
+                       data-description="Share {{recipe.Name}}">Share {{recipe.Name}}</a>
+                </div>
                 <a ui-sref="recipe({recipeId: recipe.ID})">
-                    <div class="row">
-                        <h2>
-                            <span class="RecipeTitle" ng-bind="recipe.Name"></span>
-                        </h2>
-                    </div>
+
                     <div class="row">
                         <img ng-src="{{recipe.BlurbImage}}" />
                     </div>
