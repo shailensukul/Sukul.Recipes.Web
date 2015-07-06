@@ -8,8 +8,11 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <a facebook-feed-share class="facebookShare" data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}" data-shares='shares'
-                       data-description="Share {{recipe.Name}}">Share {{recipe.Name}}</a>
+                    <a facebook-feed-share class="facebookShare" 
+                       data-picture="http://recipes.sukul.org{{recipe.BlurbImage}}"
+                       data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}" 
+                       data-caption="{{recipe.Blurb}}"
+                       data-description="{{recipe.Name}}">{{recipe.Name}}</a>
                 </div>
                 <a ui-sref="recipe({recipeId: recipe.ID})">
 
