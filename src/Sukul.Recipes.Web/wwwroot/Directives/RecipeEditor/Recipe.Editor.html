@@ -1,0 +1,49 @@
+﻿<section>
+    <div class="container">
+        <div class="row">
+            <button type="button" class="btn btn-primary btn-sm" ng-click="GetJSON()">GetJSON</button>
+            <textarea id="output" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <label for="name">Name</label>
+            </div>
+            <div class="col-md-1">
+                <input id="name" class="input-sm" placeholder="Name?" required value="{{recipe.Name}}" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <label for="postdate">Post Date</label>
+            </div>
+            <div class="col-md-1">
+                <input id="postdate" class="input-sm" placeholder="Name?" required value="{{recipe.PostDate}}" />
+            </div>
+        </div>
+        <div class="row">
+            <h3>Ingredients</h3>
+        </div>
+        <!-- The page will not get repainted after each keystroke, which solves the problem of the lost focus.  -->
+        <!-- http://stackoverflow.com/questions/15488342/binding-inputs-to-an-array-of-primitives-using-ngrepeat-uneditable-inputs -->
+        <div id="Ingredients">
+            <div class="row ingredient" ng-repeat="ingredient in recipe.Ingredients track by $index">
+                <input type="text" ng-model="recipe[$index]">
+            </div>            
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-primary btn-sm" ng-click="AddIngredient()">Add</button>
+        </div>
+        <div class="row">
+            <h3>Instructions</h3>
+        </div>
+        <div id="Instructions">
+            <div class="row instruction">
+                <label for="instruction">Instruction</label>
+                <textarea id="instruction" class="form-control" rows="3" placeholder="Instruction?" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-primary btn-sm" ng-click="AddInstruction()">Add</button>
+        </div>
+    </div>
+</section>
