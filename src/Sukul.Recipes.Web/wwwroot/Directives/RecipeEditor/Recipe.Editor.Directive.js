@@ -2,13 +2,13 @@
     'use strict';
 
     var app = angular.module('AppDirectives');
-    app.directive('ssrecipesocial', function ($compile) {
+    app.directive('ssrecipeeditor', function ($compile) {
         return {
             restrict: 'E', //element
             scope: {
                 //carrier: '='
             },
-            templateUrl: '/Directives/Social/Recipe.Social.html',
+            templateUrl: '/Directives/RecipeEditor/Recipe.Editor.html',
             replace: true,
             //require: 'ngModel',
             link: function ($scope, elem, attr, ctrl) {
@@ -24,7 +24,21 @@
     function Controller($scope, $stateParams, RecipeService) {
         /* jshint validthis:true */
         var vm = this;
-        vm.title = 'Recipe Social Directive Controller';
-            
+        vm.title = 'Recipe Editor Directive Controller';
+
+        $scope.AddIngredient = function () {
+            $(".ingredient").clone().appendTo("#Ingredients");
+        }
+        $scope.AddInstruction = function () {
+            $(".instruction").clone().appendTo("#Instructions");
+        }
+
+        $scope.GetJSON = function () {
+            var output = "{\n"
+            output += "\"Name\": \"" + $("#name").val() + "\"\n";
+            output += "}\n"
+
+            $("#output").val(output);
+        }
     }
 })();

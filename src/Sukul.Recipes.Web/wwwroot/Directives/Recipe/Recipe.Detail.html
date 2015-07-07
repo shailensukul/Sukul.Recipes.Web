@@ -1,17 +1,33 @@
 ﻿<section>
     <div class="container">
-        <div>
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>
-                        <span style="font-size:x-large" class="RecipeTitle"
-                              ng-bind="recipe.Name"></span>
-                    </h2>
-                    <p>Posted: {{recipe.PostDate | date:'dd MMM yyyy'}}</p>
-                    <img ng-src="{{recipe.BlurbImage}}" />
-                </div>
-                <div class="col-lg-3" id="col2">
-                    <span style="font-size:large" ng-bind="recipe.Blurb"></span>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>
+                    <span style="font-size:x-large" class="RecipeTitle"
+                          ng-bind="recipe.Name"></span>
+                </h2>
+                <p>Posted: {{recipe.PostDate | date:'dd MMM yyyy'}}</p>
+                <img ng-src="{{recipe.BlurbImage}}" />
+            </div>
+            <div class="col-lg-3" id="col2">
+                <span style="font-size:large" ng-bind="recipe.Blurb"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <a facebook-feed-share class="facebookShare"
+                   data-picture="http://recipes.sukul.org{{recipe.BlurbImage}}"
+                   data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}"
+                   data-caption="{{recipe.Blurb}}"
+                   data-description="{{recipe.Name}}">{{recipe.Name}}</a>
+            </div>
+            <div class="col-sm-3">
+                <div pintrest
+                     data-href='http://recipes.sukul.org/recipe/{{recipe.ID}}'
+                     data-description='{{recipe.Blurb}}'
+                     data-img='http://recipes.sukul.org{{recipe.BlurbImage}}'
+                     data-pin-do='buttonPin'
+                     data-pin-config='beside'>
                 </div>
             </div>
         </div>

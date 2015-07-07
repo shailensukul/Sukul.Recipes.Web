@@ -8,11 +8,22 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <a facebook-feed-share class="facebookShare" 
-                       data-picture="http://recipes.sukul.org{{recipe.BlurbImage}}"
-                       data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}" 
-                       data-caption="{{recipe.Blurb}}"
-                       data-description="{{recipe.Name}}">{{recipe.Name}}</a>
+                    <div class="col-sm-3">
+                        <a facebook-feed-share class="facebookShare"
+                           data-picture="http://recipes.sukul.org{{recipe.BlurbImage}}"
+                           data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}"
+                           data-caption="{{recipe.Blurb}}"
+                           data-description="{{recipe.Name}}">{{recipe.Name}}</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <div pintrest 
+                             data-href='http://recipes.sukul.org/recipe/{{recipe.ID}}' 
+                             data-description='{{recipe.Blurb}}' 
+                             data-img='http://recipes.sukul.org{{recipe.BlurbImage}}' 
+                             data-pin-do='buttonPin' 
+                             data-pin-config='beside'>
+                        </div>
+                    </div>
                 </div>
                 <a ui-sref="recipe({recipeId: recipe.ID})">
 

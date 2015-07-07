@@ -44,6 +44,13 @@
                 controller: 'BaseController',
                 parent: null
             })
+            .state('recipeeditor', {
+                name: 'recipeeditor',
+                url: '/recipeeditor',
+                templateUrl: '/Views/RecipeEditor.html',
+                controller: 'BaseController',
+                parent: null
+            })
             .state('poultrynutrition', {
                 name: 'poultrynutrition',
                 url: '/nutrition/poultry',
