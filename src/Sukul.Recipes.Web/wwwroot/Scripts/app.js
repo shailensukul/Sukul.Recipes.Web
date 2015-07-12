@@ -46,7 +46,7 @@
             })
             .state('recipeeditor', {
                 name: 'recipeeditor',
-                url: '/recipeeditor',
+                url: '/edit/{recipeId}',
                 templateUrl: '/Views/RecipeEditor.html',
                 controller: 'BaseController',
                 parent: null

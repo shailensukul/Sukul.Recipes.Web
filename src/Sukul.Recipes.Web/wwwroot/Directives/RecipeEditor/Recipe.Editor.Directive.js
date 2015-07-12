@@ -27,10 +27,32 @@
         vm.title = 'Recipe Editor Directive Controller';
 
         $scope.AddIngredient = function () {
-            $(".ingredient").clone().appendTo("#Ingredients");
+            if ($scope.recipe && $scope.recipe.Ingredients) {
+                $scope.recipe.Ingredients.push("");
+            }
         }
+
         $scope.AddInstruction = function () {
-            $(".instruction").clone().appendTo("#Instructions");
+            if ($scope.recipe && $scope.recipe.Instructions) {
+                $scope.recipe.Instructions.push("");
+            }
+        }
+
+        $scope.Save = function () {
+            RecipeService.SaveRecipe($stateParams.recipeId, $scope.recipe)
+                .error(function (data, status, headers, config) {
+                //_showValidationErrors($scope, data);
+                console.log(data);
+            });
+        }
+
+        var GetRecipe = function () {
+            RecipeService.GetRecipe($stateParams.recipeId).success(function (data) {
+                $scope.recipe = data;
+            }).error(function (data, status, headers, config) {
+                //_showValidationErrors($scope, data);
+                console.log(data);
+            });
         }
 
         $scope.GetJSON = function () {
@@ -40,5 +62,6 @@
 
             $("#output").val(output);
         }
+        GetRecipe();
     }
 })();

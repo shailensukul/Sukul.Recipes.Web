@@ -19,6 +19,11 @@
             return $http.get(recipe);
         }
 
+        RecipeServiceFactory.SaveRecipe = function (recipeId, recipe) {
+            var recipepath = '/Data/Recipes/' + recipeId + '/Recipe.json'
+            return $http.put(recipepath, recipe);
+        }
+
         return RecipeServiceFactory;
     }
 })();
