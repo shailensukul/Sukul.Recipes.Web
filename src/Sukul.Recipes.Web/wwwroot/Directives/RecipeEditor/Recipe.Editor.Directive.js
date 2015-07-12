@@ -39,10 +39,16 @@
         }
 
         $scope.Save = function () {
+            $scope.Error = false;
+
             RecipeService.SaveRecipe($stateParams.recipeId, $scope.recipe)
+                .success(function (data) {
+                    $scope.Error = false;
+                })
                 .error(function (data, status, headers, config) {
-                //_showValidationErrors($scope, data);
-                console.log(data);
+                    $scope.Error = true;
+                    //_showValidationErrors($scope, data);
+                    console.log(data);
             });
         }
 

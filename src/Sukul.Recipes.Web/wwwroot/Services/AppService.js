@@ -20,7 +20,9 @@
         }
 
         RecipeServiceFactory.SaveRecipe = function (recipeId, recipe) {
-            var recipepath = '/Data/Recipes/' + recipeId + '/Recipe.json'
+            var recipepath =
+                'http://recipes.sukul.org.s3.amazonaws.com' +
+                '/Data/Recipes/' + recipeId + '/Recipe.json'
             return $http.put(recipepath, recipe);
         }
 
