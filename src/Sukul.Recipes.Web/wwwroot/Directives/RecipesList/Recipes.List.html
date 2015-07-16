@@ -1,39 +1,39 @@
 ﻿<section>
     <div class="container">
         <div ng-repeat="recipe in recipes track by $index">
-            <div>
-                <div class="row">
-                    <h2>
-                        <span class="RecipeTitle" ng-bind="recipe.Name"></span>
-                    </h2>
+            <div class="row">
+                <h2>
+                    <span class="RecipeTitle" ng-bind="recipe.Name"></span>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+                    <a facebook-feed-share class="facebookShare"
+                       data-picture="http://recipes.sukul.org{{recipe.BlurbImage}}"
+                       data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}"
+                       data-caption="{{recipe.Blurb}}"
+                       data-shares='facebookshares'
+                       data-description="{{recipe.Name}}">{{facebookshares}}</a>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <a facebook-feed-share class="facebookShare"
-                           data-picture="http://recipes.sukul.org{{recipe.BlurbImage}}"
-                           data-url="http://recipes.sukul.org/recipe/{{recipe.ID}}"
-                           data-caption="{{recipe.Blurb}}"
-                           data-description="{{recipe.Name}}">{{recipe.Name}}</a>
-                    </div>
-                    <div class="col-sm-3">
-                        <div pintrest 
-                             data-href='http://recipes.sukul.org/recipe/{{recipe.ID}}' 
-                             data-description='{{recipe.Blurb}}' 
-                             data-img='http://recipes.sukul.org{{recipe.BlurbImage}}' 
-                             data-pin-do='buttonPin' 
-                             data-pin-config='beside'>
-                        </div>
+                <div class="col-xs-2">
+                    <div pintrest
+                         data-href='http://recipes.sukul.org/recipe/{{recipe.ID}}'
+                         data-description='{{recipe.Blurb}}'
+                         data-img='http://recipes.sukul.org{{recipe.BlurbImage}}'
+                         data-pin-do='buttonPin'
+                         data-pin-config='beside'>
                     </div>
                 </div>
-                <a ui-sref="recipe({recipeId: recipe.ID})">
-
-                    <div class="row">
-                        <img ng-src="{{recipe.BlurbImage}}" />
-                    </div>
-                    <div class="row">
-                        <span style="font-size:large" ng-bind="recipe.Blurb"></span>
-                    </div>
-                </a>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <a ui-sref="recipe({recipeId: recipe.ID})">
+                        <img class="img-responsive" ng-src="{{recipe.BlurbImage}}" />
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <span style="font-size:large" ng-bind="recipe.Blurb"></span>
+                </div>
             </div>
         </div>
     </div>

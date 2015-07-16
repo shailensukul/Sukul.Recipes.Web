@@ -20,8 +20,8 @@
         };
     });
 
-    Controller.$inject = ['$scope', '$stateParams', 'RecipeService'];
-    function Controller($scope, $stateParams, RecipeService) {
+    Controller.$inject = ['$scope', '$state', '$stateParams', 'RecipeService'];
+    function Controller($scope, $state, $stateParams, RecipeService) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'Recipe Editor Directive Controller';
@@ -44,6 +44,7 @@
             RecipeService.SaveRecipe($stateParams.recipeId, $scope.recipe)
                 .success(function (data) {
                     $scope.Error = false;
+                    $state.go('recipe', { 'recipeId' : $stateParams.recipeId });
                 })
                 .error(function (data, status, headers, config) {
                     $scope.Error = true;
@@ -59,14 +60,6 @@
                 //_showValidationErrors($scope, data);
                 console.log(data);
             });
-        }
-
-        $scope.GetJSON = function () {
-            var output = "{\n"
-            output += "\"Name\": \"" + $("#name").val() + "\"\n";
-            output += "}\n"
-
-            $("#output").val(output);
         }
         GetRecipe();
     }

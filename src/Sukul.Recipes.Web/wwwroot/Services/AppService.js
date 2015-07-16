@@ -23,7 +23,11 @@
             var recipepath =
                 'http://recipes.sukul.org.s3.amazonaws.com' +
                 '/Data/Recipes/' + recipeId + '/Recipe.json'
-            return $http.put(recipepath, recipe);
+            return $http.put(recipepath,
+                recipe, {
+                    headers: { 'x-amz-acl': 'bucket-owner-full-control' }
+                }
+                );
         }
 
         return RecipeServiceFactory;

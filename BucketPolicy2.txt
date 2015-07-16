@@ -1,0 +1,33 @@
+{
+  "Id": "Policy1436872341221",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1436871289281",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::recipes.sukul.org/*",
+      "Principal": "*"
+    },
+    {
+      "Sid": "Stmt1436871503443",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::recipes.sukul.org/*",
+      "Principal": "*"
+    },
+    {
+      "Sid": "Stmt1436872339049",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::recipes.sukul.org",
+      "Principal": "*"
+    }
+  ]
+}
