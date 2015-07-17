@@ -8,7 +8,7 @@
             scope: {
                 //carrier: '='
             },
-            templateUrl: '/Directives/Recipe/Recipe.Detail.html',
+            templateUrl: '/Directives/RecipeDetail/Recipe.Detail.html',
             replace: true,
             //require: 'ngModel',
             link: function ($scope, elem, attr, ctrl) {

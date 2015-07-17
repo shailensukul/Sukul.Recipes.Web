@@ -1,0 +1,16 @@
+{
+  "ID": "SpinachSphaghetti",
+  "Name": "Spinach Pasta",
+  "PostDate": "2015-08-17T18:25:43.511Z",
+  "BlurbImage": "/Data/Recipes/SpinachSphaghetti.Image.1.jpg",
+  "Blurb": "This is a simple healthy dish which is made even better if you use fresh organic spinach.",
+  "Ingredients": [ "15-20 spinach leaves, washed", "5-6 button mushrooms, diced", "5 cloves of garlic, diced", "2 tablespoons olive oil", "Half onion, diced", "Thin sphaghetti", "Cheddar Cheese", "Half a bottle of pasta sauce" ],
+  "Instructions": [
+    "Cook spaghetti in salted water and drain.",
+    "Brown onions, then add mushrooms and garlic.",
+    "Cook until mushrooms are tender, then add spinach leaves and cooked spaghetti.",
+    "Cook until spinach leaves are tender.",
+    "Add pasta sauce.",
+    "Serve on plate with shredded cheese and drizzle over with olive oil."
+  ]
+}

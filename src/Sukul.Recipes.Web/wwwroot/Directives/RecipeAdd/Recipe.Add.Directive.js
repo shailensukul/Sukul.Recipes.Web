@@ -2,13 +2,13 @@
     'use strict';
 
     var app = angular.module('AppDirectives');
-    app.directive('ssrecipeeditor', function ($compile) {
+    app.directive('ssrecipeadd', function ($compile) {
         return {
             restrict: 'E', //element
             scope: {
                 //carrier: '='
             },
-            templateUrl: '/Directives/RecipeEditor/Recipe.Editor.html',
+            templateUrl: '/Directives/RecipeAdd/Recipe.Add.html',
             replace: true,
             //require: 'ngModel',
             link: function ($scope, elem, attr, ctrl) {
@@ -20,11 +20,27 @@
         };
     });
 
-    Controller.$inject = ['$scope', '$state', '$stateParams', 'RecipeService'];
-    function Controller($scope, $state, $stateParams, RecipeService) {
+    Controller.$inject = ['$scope', '$state', '$stateParams', 'Upload', 'RecipeService'];
+    function Controller($scope, $state, $stateParams, Upload, RecipeService) {
         /* jshint validthis:true */
         var vm = this;
-        vm.title = 'Recipe Editor Directive Controller';
+        vm.title = 'Recipe Add Directive Controller';
+
+        $scope.uploadPic = function (files) {
+            $scope.formUpload = true;
+            if (files != null) {
+                RecipeService.SaveRecipeImage($scope.recipe.ID, files[0])
+                .success(function (data) {
+                    $scope.recipe.BlurbImage = RecipeService.GetImageURL($scope.recipe.ID, files[0]);
+                    $scope.Error = false;
+                })
+                .error(function (data, status, headers, config) {
+                    $scope.Error = true;
+                    //_showValidationErrors($scope, data);
+                    console.log(data);
+                });
+            }
+        };
 
         $scope.AddIngredient = function () {
             if ($scope.recipe && $scope.recipe.Ingredients) {
@@ -57,10 +73,10 @@
         $scope.Save = function () {
             $scope.Error = false;
 
-            RecipeService.SaveRecipe($stateParams.recipeId, $scope.recipe)
+            RecipeService.SaveRecipe($scope.recipe.ID, $scope.recipe)
                 .success(function (data) {
                     $scope.Error = false;
-                    $state.go('recipe', { 'recipeId' : $stateParams.recipeId });
+                    $state.go('recipe', { 'recipeId' : $scope.recipe.ID });
                 })
                 .error(function (data, status, headers, config) {
                     $scope.Error = true;
@@ -69,14 +85,17 @@
             });
         }
 
-        var GetRecipe = function () {
-            RecipeService.GetRecipe($stateParams.recipeId).success(function (data) {
-                $scope.recipe = data;
-            }).error(function (data, status, headers, config) {
-                //_showValidationErrors($scope, data);
-                console.log(data);
-            });
+        var AddRecipe = function () {
+            $scope.recipe = {
+                "ID": "NewRecipe",
+                "Name": "",
+                "PostDate": "2015-08-17T18:25:43.511Z",
+                "BlurbImage": "/Data/Recipes/NewRecipe.Image.1.jpg",
+                "Blurb": "",
+                "Ingredients": [""],
+                "Instructions": [""]
+            };
         }
-        GetRecipe();
+        AddRecipe();
     }
 })();

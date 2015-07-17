@@ -1,8 +1,9 @@
 ﻿{
+  "ID":  "ChiliCrab",
   "Name": "Chili Crab",
   "PostDate": "2015-07-04T18:25:43.511Z",
-  "BlurbImage": "/Data/Recipes/ChiliCrab/ChiliCrab.jpg",
-  "Blurb":  "",
+  "BlurbImage": "/Data/Recipes/ChiliCrab.Image.1.jpg",
+  "Blurb": "",
   "Ingredients": [
     "2 medium or 1 large raw crab(s)",
     "2 tablespoons olive oil",

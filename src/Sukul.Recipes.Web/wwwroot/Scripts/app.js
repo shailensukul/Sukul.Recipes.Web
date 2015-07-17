@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-    var app = angular.module('SukulRecipesApp', ['ui.router', 'djds4rce.angular-socialshare', 'AppServices', 'AppControllers',
+    var app = angular.module('SukulRecipesApp', ['ui.router', 'djds4rce.angular-socialshare', 'ngFileUpload', 'AppServices', 'AppControllers',
         'AppDirectives']);
 
     app.config(config);
@@ -58,6 +58,13 @@
                 name: 'recipe',
                 url: '/recipe/{recipeId}',
                 templateUrl: '/Views/Recipe.html',
+                controller: 'BaseController',
+                parent: null
+            })
+            .state('recipeadd', {
+                name: 'recipeadd',
+                url: '/add',
+                templateUrl: '/Views/RecipeAdd.html',
                 controller: 'BaseController',
                 parent: null
             })

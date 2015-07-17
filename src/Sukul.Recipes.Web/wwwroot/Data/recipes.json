@@ -2,57 +2,57 @@
   {
     "ID":  "SpinachPasta",
     "Name": "Spinach Pasta",
-    "Link": "/Data/Recipes/SpinachPasta/SpinachPasta.json",
+    "Link": "/Data/Recipes/SpinachPasta.Recipes.json",
     "Blurb": "This dish is great for kids and healthy to boot..",
-    "BlurbImage": "/Data/Recipes/SpinachPasta/SpinachPasta.jpg"
+    "BlurbImage": "/Data/Recipes/SpinachPasta.Image.1.jpg"
   },
   {
     "ID":  "LambShanks",
     "Name": "Slow Cooked Lamb Shanks",
-    "Link": "/Data/Recipes/LambShanks/LambShanks.json",
+    "Link": "/Data/Recipes/LambShanks.Recipes.json",
     "Blurb": "The shank of the lamb is a great cut of meat. When slowly cooked over several hours, it releases some really great flavors which combines with the melted fat to provide a rich, succulent taste.",
-    "BlurbImage": "/Data/Recipes/LambShanks/LambShanks.jpg"
+    "BlurbImage": "/Data/Recipes/LambShanks.Image.1.jpg"
   },
   {
     "ID":  "MinestroneSoup",
     "Name": "Minestrone Soup",
-    "Link": "/Data/Recipes/MinestroneSoup/LambShanks.json",
+    "Link": "/Data/Recipes/MinestroneSoup.Recipe.json",
     "Blurb": "Hearty, healthy and filling.",
-    "BlurbImage": "/Data/Recipes/MinestroneSoup/MinestroneSoup.jpg"
+    "BlurbImage": "/Data/Recipes/MinestroneSoup.Image.1.jpg"
   },
   {
     "ID":  "PumpkinRissotto",
     "Name": "Pumpkin Rissotto",
-    "Link": "/Data/Recipes/PumpkinRissotto/PumpkinRissotto.json",
-    "Blurb": "Creamy, delicous and healthy. One serve will not be enough.",
-    "BlurbImage": "/Data/Recipes/PumpkinRissotto/PumpkinRissotto.jpg"
+    "Link": "/Data/Recipes/PumpkinRissotto.Recipe.json",
+    "Blurb": "Creamy, delicious and healthy. One serve will not be enough.",
+    "BlurbImage": "/Data/Recipes/PumpkinRissotto.Image.1.jpg"
   },
   {
     "ID":  "Mussels",
-    "Name": "Mussles in White Wine",
-    "Link": "/Data/Recipes/Mussels/Mussels.json",
-    "Blurb": "Not that you would need much of a reason to eat mussles, but read on below for the amazing health benefits to eating this great tasting shellfish.",
-    "BlurbImage": "/Data/Recipes/Mussels/Mussels.jpg"
+    "Name": "Mussels in White Wine",
+    "Link": "/Data/Recipes/Mussels.Recipe.json",
+    "Blurb": "Not that you would need much of a reason to eat mussels, but read on below for the amazing health benefits to eating this great tasting shellfish.",
+    "BlurbImage": "/Data/Recipes/Mussels.Image.1.jpg"
   },
   {
     "ID":  "Kokonda",
     "Name": "Kokonda - Fijian Raw Fish",
-    "Link": "/Data/Recipes/Kokonda/Kokonda.json",
+    "Link": "/Data/Recipes/Kokonda.Recipe.json",
     "Blurb": "Fish Kokoda (pronounced Koko-n-da) is a Fijian dish made by marinating fish in coconut milk. The taste can be described as close to sashimi, only much tastier!",
-    "BlurbImage": "/Data/Recipes/Kokonda/Kokonda.jpg"
+    "BlurbImage": "/Data/Recipes/Kokonda.Image.1.jpg"
   },
   {
     "ID":  "SpinachSphaghetti",
     "Name": "Spinach Sphaghetti",
-    "Link": "/Data/Recipes/SpinachSphaghetti/SpinachSphaghetti.json",
+    "Link": "/Data/Recipes/SpinachSphaghetti.Recipe.json",
     "Blurb": "This is a simple healthy dish which is made even better if you use fresh organic spinach.",
-    "BlurbImage": "/Data/Recipes/SpinachSphaghetti/SpinachSphaghetti.jpg"
+    "BlurbImage": "/Data/Recipes/SpinachSphaghetti.Image.1.jpg"
   },
   {
     "ID":  "ChiliCrab",
     "Name": "Chili Crab",
-    "Link": "/Data/Recipes/ChiliCrab/SpinachSphaghetti.json",
-    "Blurb": "This dish is known as Chili Crab or Singapore crab and is one of the best tasting dishes you could ever make. It is a definite crowd pleaser and deceptively easy to make. Serve with very thinly cooked roti bread or hot steaming rice.",
-    "BlurbImage": "/Data/Recipes/ChiliCrab/ChiliCrab.jpg"
+    "Link": "/Data/Recipes/ChiliCrab.Recipe.json",
+    "Blurb": "This dish is known as Chili Crab or Singapore crab and is one of the best tasting dishes you could ever make. It is a definite crowd pleaser and deceptively easy to make.",
+    "BlurbImage": "/Data/Recipes/ChiliCrab.Image.1.jpg"
   }
 ]
