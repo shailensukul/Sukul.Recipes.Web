@@ -9,7 +9,7 @@
 
     function RecipeService($http, $rootScope) {
         var RecipeServiceFactory = {}
-        
+
         RecipeServiceFactory.GetRecipes = function () {
             return $http.get('/Data/recipes.json');
         }
@@ -21,6 +21,53 @@
 
         RecipeServiceFactory.GetImageURL = function (recipeId, file) {
             return '/Data/Recipes/' + recipeId + '.Image.1.' + file.name.split('.').pop();
+        }
+
+        RecipeServiceFactory.UpdateRecipes = function (recipe) {
+            // grab the file
+            var recipesPath = '/Data/recipes.json';
+
+            // grab teh recipes listing JSON file
+            return $http.get(recipesPath)
+                .success(function (recipes) {
+                    if (recipes.length > 0) {
+                        var i = recipes.length;
+                        var found = false;
+                        // Check to see if the recipe already exists in the list
+                        while (i--) {
+                            if (recipes[i].ID == recipe.ID) {
+                                // recipe exits, do an update
+                                found = true;
+                                recipes[i].Name = recipe.Name;
+                                recipes[i].Blurb = recipe.Blurb;
+                                recipes[i].BlurbImage = recipe.BlurbImage;
+                                break;
+                            }
+                        }
+                        if (!found) {
+                            // recipe does not exist. Do an insert
+                            var newRecipe = {
+                                "ID": recipe.ID,
+                                "Name": recipe.Name,
+                                "Link": "/Data/Recipes/" + recipe.ID + ".Recipes.json",
+                                "Blurb": recipe.Blurb,
+                                "BlurbImage": recipe.BlurbImage
+                            }
+                            recipes.push(newRecipe);
+                        }
+                        // Save the updated recipes list
+                        recipesPath = 'http://recipes.sukul.org.s3.amazonaws.com' + '/Data/recipes.json';
+                        $http.put(recipesPath, recipes, {
+                    headers: { 'x-amz-acl': 'bucket-owner-full-control' }
+                }
+                );
+                    }                    
+                })
+                .error(function (data, status, headers, config) {
+                    $scope.Error = true;
+                    //_showValidationErrors($scope, data);
+                    console.log(data);
+                });
         }
 
         RecipeServiceFactory.SaveRecipeImage = function (recipeId, file) {
@@ -38,6 +85,7 @@
             var recipepath =
                 'http://recipes.sukul.org.s3.amazonaws.com' +
                 '/Data/Recipes/' + recipeId + '.Recipe.json'
+            RecipeServiceFactory.UpdateRecipes(recipe);
             return $http.put(recipepath,
                 recipe, {
                     headers: { 'x-amz-acl': 'bucket-owner-full-control' }
