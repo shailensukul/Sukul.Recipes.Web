@@ -1,6 +1,11 @@
 ﻿<section>
     <div class="container">
-        <div ng-repeat="recipe in recipes track by $index">
+        <div>
+            <label for="filter">Filter: </label>
+            <input name="filter" ng-model="query" type="text"
+                   placeholder="Filter by" autofocus>
+        </div>
+        <div ng-repeat="recipe in recipes  | filter: { Name: query }">
             <div class="row">
                 <h2>
                     <span class="RecipeTitle" ng-bind="recipe.Name"></span>

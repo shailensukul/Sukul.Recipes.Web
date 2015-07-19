@@ -25,10 +25,11 @@
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'Recipes List Directive Controller';
+        $scope.query = "";
 
         var GetRecipes = function () {
             RecipeService.GetRecipes().success(function (data) {
-                $scope.recipes = data;
+                $scope.recipes = RecipeService.Shuffle(data);
             }).error(function (data, status, headers, config) {
                 //_showValidationErrors($scope, data);
                 console.log(data);

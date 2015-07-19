@@ -12,7 +12,7 @@
             });
     })
 
-    // Fix for hiding the navbar outside o
+    // Fix for hiding the navbar 
     $(document).ready(function () {
         function CloseNav() {
             $(".navbar-collapse").stop().css({ 'height': '1px' }).removeClass('in').addClass("collapse");
@@ -104,7 +104,7 @@
             })
         ;
 
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false);
         $locationProvider.hashPrefix('!');
     }
 
